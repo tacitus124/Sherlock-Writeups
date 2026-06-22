@@ -27,11 +27,13 @@ autoenum
 ```
 
 Checking the bash history of the user shows this script
-![](Pasted%20image%2020260612135217.png)
+<img width="1197" height="570" alt="image" src="https://github.com/user-attachments/assets/ee9cb154-485f-45c5-9d08-fd6b26c5798c" />
+
 
 
 If we go to the Git and look through the script we find this suspicious function "do_wget_and_run"
-![](Pasted%20image%2020260612135333.png)
+<img width="1124" height="924" alt="image" src="https://github.com/user-attachments/assets/b6b24d28-6f10-46ec-b50d-2489f2021851" />
+
 
 
 
@@ -56,7 +58,8 @@ do_wget_and_run
 ```
 
 Follow steps above
-![](Pasted%20image%2020260612135503.png)
+<img width="1167" height="839" alt="image" src="https://github.com/user-attachments/assets/aa102ace-dccf-4422-baca-14cff67296b6" />
+
 
 
 
@@ -76,10 +79,12 @@ superhacker
 
 
 The script encodes the part 1 and part 2 strings in base64. If you decode them together, you get the answer
-![](Pasted%20image%2020260612140009.png)
+<img width="647" height="540" alt="image" src="https://github.com/user-attachments/assets/9ef85ca7-024e-474a-85ba-6c015b44150f" />
 
 
-![](Pasted%20image%2020260612140202.png)
+
+<img width="1452" height="716" alt="image" src="https://github.com/user-attachments/assets/9c38d3d0-e7d9-4d0b-9935-d9fe7f2fee48" />
+
 
 
 
@@ -98,7 +103,8 @@ https://www.dropbox.com/scl/fi/uw8oxug0jydibnorjvyl2/blob.zip?rlkey=zmbys0idnbab
 
 
 The "FILE_URL" function combines the two URL's in functions f1 and f2
-![](Pasted%20image%2020260612140346.png)
+<img width="1078" height="636" alt="image" src="https://github.com/user-attachments/assets/4304a68d-3257-442f-8c88-464a6a3a26ae" />
+
 
 
 
@@ -135,7 +141,8 @@ The attacker changed the URL to download the file, what was it before the change
 https://www.dropbox.com/scl/fi/wu0lhwixtk2ap4nnbvv4a/blob.zip?rlkey=gmt8m9e7bd02obueh9q3voi5q&st=em7ud3pb&dl=1
 ```
 
-![](Pasted%20image%2020260612141600.png)
+<img width="1571" height="695" alt="image" src="https://github.com/user-attachments/assets/28c000cb-075b-407e-8da4-9e0cb6d1780d" />
+
 
 
 
@@ -158,7 +165,8 @@ https://attack.mitre.org/techniques/T1053/003/
 
 
 The script places the downloaded file in crontab so it executes on startup
-![](Pasted%20image%2020260612141720.png)
+<img width="1016" height="791" alt="image" src="https://github.com/user-attachments/assets/9a34c23f-93d6-43ac-9b66-bacc25e03a0b" />
+
 
 
 
@@ -180,4 +188,4 @@ https://attack.mitre.org/techniques/T1496/
 
 
 We can further confirm it by checking the config file included in the download
-![](Pasted%20image%2020260612142905.png)
+<img width="1409" height="618" alt="image" src="https://github.com/user-attachments/assets/4f4bcca1-7186-4863-a87d-ac79e8a4d8bf" />
