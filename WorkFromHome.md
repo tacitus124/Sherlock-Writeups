@@ -22,7 +22,8 @@ http://login.wowzalnc.co.th/logon.php
 Import Chrome history located at "C\Users\otello.j\AppData\Local\Google\Chrome\User Data\Default/History" into DB Browser and go to urls. If we look closely we can see one domain that differentiates from the benign domain. 
 
 Notice the i in wowzainc and then the other domain using l in wowzalnc. This is known as typosquatting
-![](Pasted%20image%2020260619142044.png)
+<img width="1345" height="531" alt="image" src="https://github.com/user-attachments/assets/a494ffca-fbc1-4540-a238-bb58dbb6eb8f" />
+
 
 
 
@@ -50,7 +51,8 @@ Extract login events from Security folder with chainsaw
 ```
 Then filter for events with LogonType 10 indicating an RDP login
 
-![](Pasted%20image%2020260619151325.png)
+<img width="405" height="561" alt="image" src="https://github.com/user-attachments/assets/d509213f-e750-4cdf-9e3e-402eaa2318a0" />
+
 
 
 
@@ -72,7 +74,8 @@ C:\Users\otello.j\Desktop\Working\Proposal to CFO.pptx
 
 Import MFT into Timeline Explorer search for "pptx"
 
-![](Pasted%20image%2020260619152014.png)
+<img width="1612" height="542" alt="image" src="https://github.com/user-attachments/assets/7685cdc6-3e87-4b36-920f-ba32afcf4447" />
+
 
 
 
@@ -88,7 +91,8 @@ SeManageVolumePrivilege
 
 
 We can find this download in the Chrome downloads. This exploits the _SeManageVolumePrivilege_ privilege
-![](Pasted%20image%2020260619153140.png)
+<img width="1192" height="232" alt="image" src="https://github.com/user-attachments/assets/92f40a3f-c499-429f-8c2d-1c7f1597ac51" />
+
 
 
 
@@ -110,7 +114,8 @@ SeManageVolumeExploit.exe
 
 
 
-![](Pasted%20image%2020260619153324.png)
+<img width="1192" height="232" alt="image" src="https://github.com/user-attachments/assets/3b1fed28-3152-4eef-93ef-076f8c33922b" />
+
 
 
 
@@ -134,7 +139,8 @@ http://freehackingtool.com/tools/PrintConfig.dll
 
 
 Still looking in the Chrome browser downloads, we find this DLL
-![](Pasted%20image%2020260619154503.png)
+<img width="1231" height="202" alt="image" src="https://github.com/user-attachments/assets/64d90ceb-cfb9-4f2a-aea9-73b172a3ad22" />
+
 
 
 
@@ -156,7 +162,8 @@ The user shut down the browser
 In the same Downloads tab as in Q6 we can see a tab called "interrupt_reason" with a value of "41" for the DLL file. Looking it up means user shut down the browser
 
 
-![](Pasted%20image%2020260619163713.png)
+<img width="1424" height="334" alt="image" src="https://github.com/user-attachments/assets/54f4b63b-af07-4776-b39c-183ee46588b2" />
+
 
 
 https://dfir.blog/chrome-values-lookup-tables/
@@ -181,15 +188,18 @@ Searching for the earliest sign of the DLL with chainsaw shows this result
 ```
 .\chainsaw.exe search -e "PrintConfig.dll" 'C:\Users\*\Desktop\C' --skip-errors | findstr "SystemTime"
 ```
-![](Pasted%20image%2020260619165834.png)
+<img width="756" height="258" alt="image" src="https://github.com/user-attachments/assets/42ef4168-f7ae-45a9-bc92-f1bbecdc1fd0" />
+
 
 Tools like certutil,powershell etc drop downloaded files at this location "\C\Users\otello.j\AppData\LocalLow\Microsoft\CryptnetUrlCache\MetaData"
 
 We can find a file downloaded at the same time as the earliest sign of the DLL, ignore my time difference
-![](Pasted%20image%2020260619170219.png)
+<img width="726" height="304" alt="image" src="https://github.com/user-attachments/assets/30c28e30-07d9-424f-abcb-21c63212f581" />
+
 
 If we run strings on it, we see its URL
-![](Pasted%20image%2020260619170249.png)
+<img width="1566" height="129" alt="image" src="https://github.com/user-attachments/assets/0d862b16-7cc7-4b81-aec6-91667f8fa5ae" />
+
 
 
 
@@ -212,7 +222,7 @@ When was the malicious DLL file successfully downloaded using this LOLBIN?
 
 
 We can find earliest creation date in USN journal output. Use usnparser to extract the data and import it into Timeline Explorer and search for the DLL
-![](Pasted%20image%2020260619174148.png)
+<img width="1889" height="550" alt="image" src="https://github.com/user-attachments/assets/4ca9fe20-b0a0-4901-b50d-c9e454cf94dc" />
 
 
 
@@ -235,11 +245,13 @@ C:\Windows\System32\spool\drivers\x64\3\Printconfig.dll
 
 
 regsvr32.exe trying to register the dll
-![](Pasted%20image%2020260619175310.png)
+<img width="1464" height="447" alt="image" src="https://github.com/user-attachments/assets/f76932a6-b5ac-4d51-bb4c-99a688da25bb" />
+
 
 
 Defender flagged this file as malicious
-![](Pasted%20image%2020260619175235.png)
+<img width="914" height="839" alt="image" src="https://github.com/user-attachments/assets/5cd0a0f5-4c8d-4dbc-abce-a6e5b4de6f3a" />
+
 
 
 
@@ -261,7 +273,7 @@ The threat actor removed the legitimate DLL before replacing it with the malicio
 
 
 Check for FILE_DELETE event in usn output
-![](Pasted%20image%2020260619175712.png)
+<img width="1841" height="555" alt="image" src="https://github.com/user-attachments/assets/b517d9eb-bcf7-4ed8-989a-3259dac10ac3" />
 
 
 
@@ -286,7 +298,8 @@ Search for all events related to PrintConfig.dll using chainsaw and look for Def
 ```
 .\chainsaw.exe search -e "PrintConfig.dll" 'C:\Users\*\Desktop\C' --skip-errors
 ```
-![](Pasted%20image%2020260619175820.png)
+<img width="1302" height="823" alt="image" src="https://github.com/user-attachments/assets/220137ec-c0ae-4d72-8af2-683b3bd78c4c" />
+
 
 
 
@@ -309,7 +322,8 @@ The threat actor initiated a Windows component to load this DLL. What is the CLS
 
 The exploit uses Powershell, therefore we can go to the users Powershell history file and see the command
 C\Users\otello.j\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history
-![](Pasted%20image%2020260619181457.png)
+<img width="952" height="234" alt="image" src="https://github.com/user-attachments/assets/547278d8-3b0e-48dc-9ee5-a798d9de3911" />
+
 
 
 
@@ -329,7 +343,7 @@ PrintNotify
 
 
 We can find the service name in the same chainsaw output from earlier
-![](Pasted%20image%2020260619181748.png)
+<img width="896" height="731" alt="image" src="https://github.com/user-attachments/assets/4612a7b4-097c-4364-bf8b-c087ab31c80e" />
 
 
 
@@ -350,7 +364,7 @@ What is the SHA1 hash of the malicious DLL file?T
 
 
 Defender produces hash of flagged files, you can find them in the MPlogs located at \C\ProgramData\Microsoft\Windows Defender\Support\MPLog*
-![](Pasted%20image%2020260619183019.png)
+<img width="1326" height="307" alt="image" src="https://github.com/user-attachments/assets/1b0c1379-6d2d-4674-948e-082d60a67803" />
 
 
 
@@ -371,17 +385,20 @@ C:\windows\system32\wbem\tzres.dll
 
 
 Going back to the certutil downloaded files, we see something was downloaded around the same time as the first dll
-![](Pasted%20image%2020260619184052.png)
+<img width="651" height="264" alt="image" src="https://github.com/user-attachments/assets/35ead32f-b974-4aea-8126-80bec9853384" />
+
 
 If we check its contents we see this DLL downloaded
-![](Pasted%20image%2020260619184155.png)
+<img width="1536" height="300" alt="image" src="https://github.com/user-attachments/assets/d0077ad6-efd0-46a7-8a02-3a602b08c7cf" />
+
 
 
 Then we search all events related to the DLL with chainsaw to find its location
 ```
 .\chainsaw.exe search -e "tzres.dll" C:\Users\*\Desktop\C\ --skip-errors
 ```
-![](Pasted%20image%2020260619184933.png)
+<img width="1141" height="492" alt="image" src="https://github.com/user-attachments/assets/b28c5244-8fe2-4883-9b66-1f1fa0fea938" />
+
 
 
 
@@ -398,7 +415,8 @@ When was this DLL downloaded on the system?
 ```
 
 Search through MFT output for "tzres.dll"
-![](Pasted%20image%2020260619185237.png)
+<img width="1748" height="446" alt="image" src="https://github.com/user-attachments/assets/3c4aa041-afe5-4acc-b23f-e8a2df91406b" />
+
 
 
 
@@ -423,14 +441,16 @@ C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\a.vbs
 
 
 Going back to the Chrome downloads, we can see a.vbs getting downloaded
-![](Pasted%20image%2020260619185813.png)
+<img width="1410" height="184" alt="image" src="https://github.com/user-attachments/assets/cfaf2efb-182b-4f0e-b782-0ff8d8a80351" />
+
 
 
 We can find its location using chainsaw
 ```
 .\chainsaw.exe search -e "a.vbs" C:\Users\*\Desktop\C\ --skip-errors
 ```
-![](Pasted%20image%2020260619185735.png)
+<img width="1651" height="649" alt="image" src="https://github.com/user-attachments/assets/885199dc-afb3-4fb0-8215-0d3d0c90d01b" />
+
 
 
 
@@ -446,7 +466,8 @@ cmd.exe /c systeminfo
 ```
 
 
-![](Pasted%20image%2020260619185953.png)
+<img width="1387" height="521" alt="image" src="https://github.com/user-attachments/assets/8c893aea-3263-4134-b3d3-737e41631855" />
+
 
 
 
@@ -469,7 +490,7 @@ The threat actor configured the VBS script to be hidden from the Windows GUI (Fi
 
 
 We can the change in USN journal output
-![](Pasted%20image%2020260619190636.png)
+<img width="1892" height="446" alt="image" src="https://github.com/user-attachments/assets/521ce8fe-5a82-4ee1-9a69-7914356f975b" />
 
 
 
@@ -491,7 +512,8 @@ wmiprvse.exe
 
 
 Research shows wmiprvse is a common process associated with this DLL
-![](Pasted%20image%2020260619191455.png)
+<img width="551" height="568" alt="image" src="https://github.com/user-attachments/assets/7c361473-48df-403a-bab7-9f0664806844" />
+
 
 
 
@@ -514,7 +536,8 @@ C:\Users\Public\Pictures\gg.bmp
 
 
 Going back to the users Powershell history we find this image
-![](Pasted%20image%2020260619191846.png)
+<img width="952" height="185" alt="image" src="https://github.com/user-attachments/assets/ba301e91-7fe5-44a2-8f67-b05fdcf4f7c8" />
+
 
 
 
@@ -543,7 +566,8 @@ We can use chainsaw to search for the command run in Q22 and we will find the Po
 ```
 .\chainsaw.exe search -e "HKCU\\control panel\\desktop" C:\Users\*\Desktop\C\ --skip-errors
 ```
-![](Pasted%20image%2020260619192606.png)
+<img width="935" height="583" alt="image" src="https://github.com/user-attachments/assets/54ac2880-d4b2-452d-990d-efab0d83dedc" />
+
 
 
 
@@ -564,7 +588,8 @@ When did the victim user log in to their workstation after the compromise?
 
 
 Use the same logs you extracted in Q2 and look for local login events related to the user after the wallpaper was changed
-![](Pasted%20image%2020260619195027.png)
+<img width="831" height="579" alt="image" src="https://github.com/user-attachments/assets/c343659b-f7cc-4f09-8d1c-0da5b2527683" />
+
 
 
 
