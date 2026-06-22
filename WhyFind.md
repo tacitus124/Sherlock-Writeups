@@ -18,7 +18,8 @@ InvisibleChains
 
 Import SYSTEM hive into Registry Explorer and go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Param eters\Interfaces
 
-![](Pasted%20image%2020260608194250.png)
+<img width="1275" height="486" alt="image" src="https://github.com/user-attachments/assets/cd73e76a-cdbd-4c66-ad66-f430d3cc3850" />
+
 
 
 
@@ -30,7 +31,8 @@ ArboretumCoffee
 
 Import SOFTWARE hive into Registry Explorer and go to Software/Microsoft/Windows NT/Current Version/NetworkList
 
-![](Pasted%20image%2020260608194937.png)
+<img width="1834" height="350" alt="image" src="https://github.com/user-attachments/assets/e6bcd4e5-8f74-4c33-a06b-3f7c7c5d3749" />
+
 
 
 
@@ -40,7 +42,8 @@ When did the system obtain a lease for the network?
 2025-05-30 18:22:48
 
 Load SYSTEM hive into Registry Explorer and go to ControlSet001\Services\Tcpip\Parameters\Interfaces and the DCHPNetworkHints tab
-![](Pasted%20image%2020260608201720.png)
+<img width="1395" height="360" alt="image" src="https://github.com/user-attachments/assets/ec5d67f9-e82c-48f5-9e80-9d667fc0d831" />
+
 
 
 
@@ -49,7 +52,7 @@ Task 4
 
 What IP address did the device receive when connecting to the café?
 172.16.100.16
-![](Pasted%20image%2020260608202200.png)
+<img width="1267" height="255" alt="image" src="https://github.com/user-attachments/assets/145c550e-c577-495d-85f3-6fb554271b23" />
 
 
 
@@ -61,7 +64,11 @@ Task 5
 What was the BSSID (MAC address) of the access point they connected to at the café?
 E4-D1-24-96-A5-D1
 
-![](Pasted%20image%2020260608202602.png)
+
+
+
+
+
 
 
 
@@ -74,7 +81,8 @@ The Chains Not Seen.txt
 
 
 Load in ntuser.dat and check RecentDocs
-![](Pasted%20image%2020260608203650.png)
+
+
 
 
 
