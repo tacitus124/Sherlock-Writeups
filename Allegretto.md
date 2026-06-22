@@ -22,7 +22,8 @@ Extract MFT data and import into Timeline Explorer and search for QGIS
 ```
 .\MFTECmd.exe -f '..\investigation\Target\C\$MFT' --csv C:\Users\*\Desktop\investigation\
 ```
-![](Pasted%20image%2020260618154413.png)
+<img width="1239" height="337" alt="image" src="https://github.com/user-attachments/assets/58b8bc97-06a5-4bb0-ac18-7b1cd7e7bce9" />
+
 
 
 
@@ -39,7 +40,8 @@ shadow152535@darkmail.htb
 
 
 We can find the email in \Important collections\Thunderbird\Profiles\ka48xic2.default-esr\ImapMail\mail.darkmail.htb\INBOX
-![](Pasted%20image%2020260618155531.png)
+<img width="1241" height="380" alt="image" src="https://github.com/user-attachments/assets/30c3715f-7dcd-4ef9-87a8-18a361b7b544" />
+
 
 
 
@@ -53,7 +55,8 @@ What is Shadow's Bitcoin address?
 ```
 
 We can find it in the same file as in Q2
-![](Pasted%20image%2020260618155834.png)
+<img width="718" height="587" alt="image" src="https://github.com/user-attachments/assets/6e342a20-81f3-41ed-8dab-48588745d879" />
+
 
 
 
@@ -69,7 +72,9 @@ http://silkroadm5oqzuz3yq7pvwvinvyzeg2wnpnw3t4cyrsggrcgqfy2ptid.onion
 ```
 
 We can find the relevant information in \Important collections\Thunderbird\Profiles\ka48xic2.default-esr\Mail\Local Folders\Drafts
-![](Pasted%20image%2020260618161121.png)
+<img width="1767" height="795" alt="image" src="https://github.com/user-attachments/assets/6f22107a-452c-4290-bfde-1c91a6dfb513" />
+
+
 
 
 
@@ -90,7 +95,8 @@ Based on the cookie's last access, when was the last time Shadow visited the Sil
 
 
 Import \Important collections\Tor Browser\Browser\TorBrowser\Data\Browser\profile.default\cookies.sqlite into DB Browser and check LastAccessed for the found domain in moz_cookies. 
-![](Pasted%20image%2020260618161750.png)
+<img width="1603" height="349" alt="image" src="https://github.com/user-attachments/assets/e209dc4a-0519-4e70-a04f-638293985d50" />
+
 then convert the timestamp into UTC https://www.unixtimestamp.com/
 
 
@@ -110,7 +116,7 @@ Get-ChildItem -Path \Important collections\Thunderbird -Recurse -File |
 >> Select-String -Pattern "hotmail"
 ```
 
-![](Pasted%20image%2020260618162748.png)
+<img width="1055" height="523" alt="image" src="https://github.com/user-attachments/assets/7f7e8ae1-bf52-4156-aaf8-170a59f9c857" />
 
 
 
@@ -127,7 +133,8 @@ When was Shadow supposed to meet his mysterious boss?
 If the user has been using the calendar function within Thunderbird, the relevant information can be found in Thunderbird\Profiles\ka48xic2.default-esr\calendar-data\local.sqlite. 
 
 Here we can see an event named "Meet the boss"
-![](Pasted%20image%2020260618163121.png)
+<img width="1598" height="230" alt="image" src="https://github.com/user-attachments/assets/c5649004-100d-4e74-abe5-f873680394f5" />
+)
 Convert it into UTC with https://www.unixtimestamp.com/
 
 
@@ -143,7 +150,8 @@ When was the "Contacts Due Amounts" spreadsheet created?
 
 
 In the file we found in Q2 an attachment called "contacts_due_amounts.xlsx". Extract the base64 into a file and run exiftool to extract metadata from the file
-![](Pasted%20image%2020260618163943.png)
+<img width="906" height="547" alt="image" src="https://github.com/user-attachments/assets/fae5b09a-3453-480b-a548-906ff8dc0770" />
+
 
 
 
