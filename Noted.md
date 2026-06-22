@@ -21,7 +21,8 @@ What is the full path of the script used by Simon for AWS operations?
 C:\Users\Simon.stark\Documents\Dev_Ops\AWS_objects migration.pl
 ```
 Located in /Noted/C/Users/Simon.stark/AppData/Roaming/Notepad++/config.xml
-![](Pasted%20image%2020260609181259.png)
+<img width="1094" height="274" alt="image" src="https://github.com/user-attachments/assets/8b10e926-68c2-4764-b61e-cb86318cdfc9" />
+
 
 
 
@@ -34,10 +35,12 @@ C:\Users\Simon.stark\Desktop\LootAndPurge.java
 ```
 
 The JAVA@2023-07-24_145332 file in Backup folder is a ransom script.
-![](Pasted%20image%2020260609182600.png)
+<img width="1406" height="630" alt="image" src="https://github.com/user-attachments/assets/14fe224b-07ef-45ef-83cc-487b19c181bd" />
+
 
 We can find the files location in session.xml
-![](Pasted%20image%2020260609182712.png)
+<img width="1676" height="443" alt="image" src="https://github.com/user-attachments/assets/bc13a860-8c41-4e21-947f-858a0c7a1716" />
+
 
 
 
@@ -49,7 +52,8 @@ What's the name of the final archive file containing all the data to be exfiltra
 Forela-Dev-Data.zip
 ```
 
-![](Pasted%20image%2020260609182829.png)
+<img width="1026" height="596" alt="image" src="https://github.com/user-attachments/assets/9ea81082-1c2f-4660-8acb-343ac53ed965" />
+
 
 
 
