@@ -28,12 +28,14 @@ vol3 -f Dump.mem windows.cmdline
 ```
 
 
-![](Pasted%20image%2020260616222630.png)
+<img width="1899" height="799" alt="image" src="https://github.com/user-attachments/assets/bb209ff5-e94f-4dca-a5cd-60cdf2c64d3e" />
 
 
 
 
-![](Pasted%20image%2020260616222733.png)
+
+<img width="1528" height="822" alt="image" src="https://github.com/user-attachments/assets/69256bdd-58cd-4819-b9cf-cafb6913ed62" />
+
 **Summary (stager):**
 
 - **Purpose**: Downloads an encrypted payload from http://43.204.228.96:24/news.php and executes it in memory via IEX.
@@ -61,7 +63,8 @@ To get email related information we can run bulk extractor on the memory. Then w
 ```
 cat email.txt | grep "grunwald"
 ```
-![](Pasted%20image%2020260617132253.png)
+<img width="1287" height="815" alt="image" src="https://github.com/user-attachments/assets/4ad5fe31-fde7-44d0-9758-aecb76daf6ad" />
+
 We also know from image in Q1 Firefox was used.
 
 
@@ -81,7 +84,8 @@ Search for admin related emails
 ```
 cat email.txt | grep "admin"
 ```
-![](Pasted%20image%2020260617135538.png)
+<img width="1067" height="435" alt="image" src="https://github.com/user-attachments/assets/fe491b8f-b006-4d1d-b9ae-651ce9197d49" />
+
 
 
 
@@ -126,7 +130,7 @@ extract processes and look for document related processes
 ```
 vol3 -f Dump.mem Windows.pstree
 ```
-![](Pasted%20image%2020260617141434.png)
+<img width="1401" height="556" alt="image" src="https://github.com/user-attachments/assets/70ddf99c-0ff0-461f-894e-f3e74425cc77" />
 
 
 
@@ -151,7 +155,8 @@ vol3 -f Dump.mem windows.dumpfiles --pid 9888
 then open file.0xdc81d8415100.0xdc81d82a6490.DataSectionObject.Budget-Plan_Pakistan.docx.dat
 and open /word/document.xml
 
-![](Pasted%20image%2020260617153707.png)
+<img width="1187" height="541" alt="image" src="https://github.com/user-attachments/assets/61f44d99-593b-43d8-8b8f-3db2e12cf7c4" />
+
 
 
 
@@ -166,7 +171,8 @@ What's the expected date of start of business in Pakistan?
 
 
 in same document as in Q6
-![](Pasted%20image%2020260617154052.png)
+<img width="1255" height="248" alt="image" src="https://github.com/user-attachments/assets/da0af91f-5fbc-41ba-a67a-badfa79ea748" />
+
 
 
 
@@ -184,10 +190,12 @@ SystemHealthCheck.zip
 
 
 The phishing email mentioned a zip
-![](Pasted%20image%2020260617155518.png)
+<img width="1904" height="297" alt="image" src="https://github.com/user-attachments/assets/32a77d2a-abe0-499c-a509-8dcd4072a771" />
+
 
 We can look for any zip files in the process output
-![](Pasted%20image%2020260617155448.png)
+<img width="629" height="139" alt="image" src="https://github.com/user-attachments/assets/9b4834d4-63ba-420c-8a07-9f1b24f821ad" />
+
 
 
 
@@ -209,7 +217,8 @@ Grep for "System" in the bulk extractor zip output
 ```
 cat zip.txt | grep "System"
 ```
-![](Pasted%20image%2020260617161405.png)
+<img width="1388" height="233" alt="image" src="https://github.com/user-attachments/assets/3143021a-ac4e-470f-8c28-c7be59d0c616" />
+
 hta files are scripts used to execute payloads and are commonly used in phishing attacks
 
 
@@ -230,7 +239,8 @@ forela1234, forela123
 ```
 strings Dump.mem | grep "alonzo.spire@forela.co.uk"
 ```
-![](Pasted%20image%2020260617162304.png)
+<img width="1515" height="296" alt="image" src="https://github.com/user-attachments/assets/0c775a6b-b970-47ee-aa44-85de803d3fb1" />
+
 
 
 
@@ -249,7 +259,8 @@ dd46189c153f8e3f4d34868df3f6511f
 
 
 unzip the First.zip > Second.zip with the passwords found earlier and md5sum the file for hash
-![](Pasted%20image%2020260617165521.png)
+<img width="628" height="180" alt="image" src="https://github.com/user-attachments/assets/c83a58da-c0b6-45f2-8095-9fc6df924b0f" />
+
 
 
 
@@ -268,7 +279,8 @@ Empire
 
 
 Several labels show signs of Empire being used
-![](Pasted%20image%2020260617165651.png)
+<img width="1805" height="487" alt="image" src="https://github.com/user-attachments/assets/794959d7-32e1-4a0f-9de2-37265a3dd87a" />
+
 https://www.virustotal.com/gui/file/2567f2b05822f4d78b049a0bf42e2ead2ee6aa110311e3f3c27249ab7f8f28a1
 
 
@@ -287,7 +299,8 @@ What is the PID of the process the threat actor abused for privilege escalation?
 
 
 Checking the process list we can find this process chain which is highly suspicious
-![](Pasted%20image%2020260617172551.png)
+<img width="1112" height="161" alt="image" src="https://github.com/user-attachments/assets/ac4deb24-c9eb-4a15-a69c-4d27cda917ce" />
+
 
 
 
@@ -311,7 +324,8 @@ with the suspicious chain we found in last task, we continue to investigate the 
 vol3 -f Dump.mem windows.dlllist --pid "4352"
 ```
 
-![](Pasted%20image%2020260617173914.png)
+<img width="1516" height="135" alt="image" src="https://github.com/user-attachments/assets/de376a63-4ce1-42f3-a2a2-d34207fa5959" />
+
 
 We see this malicious DLL being loaded
 
@@ -350,7 +364,8 @@ We know the pid of the powershell process from task 1 so lets use that to search
 ```
 vol3 -f Dump.mem windows.netscan | grep "9620"
 ```
-![](Pasted%20image%2020260617180821.png)
+<img width="1213" height="312" alt="image" src="https://github.com/user-attachments/assets/760e7077-55cc-4873-8102-6b22de14214b" />
+
 
 
 
@@ -370,7 +385,7 @@ Hunt for the second C2 Address to which connection was made by a LOLBIN after es
 
 
 rundll32 making a network connection
-![](Pasted%20image%2020260617181051.png)
+<img width="1268" height="441" alt="image" src="https://github.com/user-attachments/assets/f7543b60-1176-4017-95e9-be3a4811972a" />
 
 
 
@@ -407,7 +422,7 @@ docx, docm, pdf, xls, txt, ppt, xlsx, pptx
 
 
 Run a recursive string scan in the bulk extractor output
-![](Pasted%20image%2020260618123625.png)
+<img width="938" height="479" alt="image" src="https://github.com/user-attachments/assets/9ed01a66-5512-4d0d-b395-31f9cdc797ac" />
 
 
 
@@ -428,7 +443,8 @@ rwajnkhgbdtyalmd
 ```
 
 
-![](Pasted%20image%2020260618124041.png)
+<img width="938" height="479" alt="image" src="https://github.com/user-attachments/assets/d79bdb7a-bd92-43ab-b3f8-3a7dccc66efc" />
+
 
 
 
@@ -447,7 +463,8 @@ Teamviewer
 
 
 
-![](Pasted%20image%2020260617181457.png)
+<img width="1679" height="175" alt="image" src="https://github.com/user-attachments/assets/778fe089-5ff5-496f-8957-0efa45771ad7" />
+
 
 
 
