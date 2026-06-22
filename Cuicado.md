@@ -22,7 +22,8 @@ What is the victim's IP address?
 
 
 Filter for HTTP traffic and you will notice a malicious looking request
-![](Pasted%20image%2020260615212802.png)
+<img width="1093" height="807" alt="image" src="https://github.com/user-attachments/assets/925266cf-b828-4b2c-8072-d648f7053d2d" />
+
 
 
 
@@ -44,7 +45,8 @@ What is the IP address of the attacker from whom the files were downloaded?
 ```
 
 
-![](Pasted%20image%2020260615213156.png)
+<img width="928" height="724" alt="image" src="https://github.com/user-attachments/assets/2f83ec49-f57d-4a19-9950-27d0faa80952" />
+
 
 
 
@@ -56,7 +58,8 @@ Which malicious file appears to be the first one downloaded?
 ```
 sh
 ```
-![](Pasted%20image%2020260615213210.png)
+<img width="928" height="724" alt="image" src="https://github.com/user-attachments/assets/18c5e3d8-c3be-4480-9ef4-64099d7aaa96" />
+
 
 
 
@@ -78,7 +81,8 @@ dlr
 
 
 Follow the HTTP stream of the malicious request
-![](Pasted%20image%2020260615213407.png)
+<img width="1280" height="458" alt="image" src="https://github.com/user-attachments/assets/e812cbc8-a268-487a-8fb2-5204d6b081e2" />
+
 
 
 
@@ -94,7 +98,8 @@ Which port does the attacker's server use?
 80
 ```
 
-![](Pasted%20image%2020260615213501.png)
+<img width="603" height="489" alt="image" src="https://github.com/user-attachments/assets/64d600b1-3f42-42b1-95aa-5c6f732682a0" />
+
 
 
 
@@ -112,7 +117,8 @@ The script checks which directories it can write to by attempting to create test
 ```
 
 
-![](Pasted%20image%2020260615213627.png)
+<img width="1088" height="169" alt="image" src="https://github.com/user-attachments/assets/322f9396-8126-468a-9648-0f0b2b88a580" />
+
 
 
 
@@ -130,7 +136,8 @@ uname -mp
 ```
 
 
-![](Pasted%20image%2020260615214329.png)
+<img width="676" height="276" alt="image" src="https://github.com/user-attachments/assets/ef2c9e8b-4de4-49b0-a495-6b6295a9e19b" />
+
 
 
 
@@ -173,7 +180,8 @@ systemctl disable c3pool_miner
 ip.src_host== 192.168.1.152 and ip.dst_host == 94.156.177.109
 ```
 Filter for the communicating IP's and go to Statistics > Conversations  > TCP > and then follow any of the streams until you find this
-![](Pasted%20image%2020260615215413.png)
+<img width="944" height="466" alt="image" src="https://github.com/user-attachments/assets/d41a2bfc-a4b3-4264-98ed-e3660ad667b6" />
+
 
 
 
@@ -194,7 +202,8 @@ Apparently, the attacker used a packer to compress the malware. Which version of
 
 Export the x86_64 file from File > Export Objects > HTTP > x86_64. Then run strings on it to find the version
 
-![](Pasted%20image%2020260615220304.png)
+<img width="853" height="576" alt="image" src="https://github.com/user-attachments/assets/2e351fd0-c4c0-46c0-be20-28b545aa673f" />
+
 
 
 
@@ -253,6 +262,7 @@ T1496
 
 
 Lots of the analysis points to the malware being a miner
-![](Pasted%20image%2020260615225335.png)
+<img width="1780" height="844" alt="image" src="https://github.com/user-attachments/assets/3fed34f9-f04e-42b0-b0d7-dbbb50077c5f" />
+
 
 https://attack.mitre.org/techniques/T1496/
