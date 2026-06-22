@@ -16,7 +16,8 @@ When did the client receive the email?
 2024-09-19 17:44:11
 
 
-![](Pasted%20image%2020260609145301.png)
+<img width="1252" height="612" alt="image" src="https://github.com/user-attachments/assets/816162cf-87f9-4035-a3be-7be53e1001d4" />
+
 
 
 
@@ -63,7 +64,8 @@ print(f"[+] Total attachments: {count}")
 This will extract the attachment into a "attachments" folder. Then run strings on the file in attachments folder
 
 
-![](Pasted%20image%2020260609155031.png)
+<img width="773" height="593" alt="image" src="https://github.com/user-attachments/assets/a6caca32-3bf4-4eff-afec-debce41355ac" />
+
 
 
 
@@ -78,7 +80,8 @@ What is the embedded file name with extension inside the malicious PDF?
 downtown_construction_project_plan.pdf)
 ```
 
-![](Pasted%20image%2020260609155521.png)
+<img width="1351" height="387" alt="image" src="https://github.com/user-attachments/assets/f8f2c1c7-9063-4ee8-82b8-44f7c9174438" />
+
 
 
 
@@ -167,7 +170,8 @@ search through logs for service installation events with chainsaw
 ```
 .\chainsaw.exe search -e "7045" C:\Users\*\Desktop\C\Target\C\Windows\System32\winevt\logs\
 ```
-![](Pasted%20image%2020260609165849.png)
+<img width="788" height="586" alt="image" src="https://github.com/user-attachments/assets/4fc4892e-229b-4f2e-acad-e9d4d042e38a" />
+
 
 
 
@@ -182,4 +186,4 @@ search through logs for service installation events with chainsaw
 ```
 .\chainsaw.exe search -e "7045" C:\Users\*\Desktop\C\Target\C\Windows\System32\winevt\logs\
 ```
-![](Pasted%20image%2020260609165424.png)
+<img width="719" height="591" alt="image" src="https://github.com/user-attachments/assets/f116e183-2338-4f9a-804c-7b9dcd70fd4b" />
