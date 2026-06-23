@@ -27,7 +27,7 @@ UTC+05:00
 
 
 We can find the timezone in TimeZoneInformation
-![](Pasted%20image%2020260622182648.png)
+<img width="2463" height="1296" alt="image" src="https://github.com/user-attachments/assets/7cf12bf6-d3b6-4d1e-aeaa-4cb095d716b9" />
 
 
 
@@ -46,7 +46,7 @@ MrManj
 ```
 
 
-![](Pasted%20image%2020260622182912.png)
+<img width="806" height="405" alt="image" src="https://github.com/user-attachments/assets/af99e9e0-2cd6-4628-9b65-0267632b781b" />
 
 
 
@@ -66,7 +66,8 @@ How many USB storage devices were attached to this host in total?
 ```
 
 
-![](Pasted%20image%2020260622230911.png)
+<img width="504" height="245" alt="image" src="https://github.com/user-attachments/assets/0606e80b-b7e5-464a-9855-cae9567f52a3" />
+
 
 
 
@@ -90,7 +91,8 @@ What is the attach timestamp for the USB in UTC?
 
 
 We know from Sherlock description we are looking for a Toshiba usb. To find its installation date we can check USBSTOR in SYSTEM hive
-![](Pasted%20image%2020260622231152.png)
+<img width="2922" height="347" alt="image" src="https://github.com/user-attachments/assets/eb615155-0121-48b7-bb4f-70343855ae0c" />
+
 
 
 
@@ -109,7 +111,8 @@ What is the detach timestamp for the USB in UTC?
 
 
 To find its last detach we can check USBSTOR in SYSTEM hive
-![](Pasted%20image%2020260622231548.png)
+<img width="2975" height="254" alt="image" src="https://github.com/user-attachments/assets/23089ee2-2e79-4e47-8557-6dfaaf899c78" />
+
 
 
 
@@ -135,11 +138,13 @@ Extract usrclass.dat from
 ```
 C:\Users\MrManj\AppData\Local\Microsoft\Windows\
 ```
-![](Pasted%20image%2020260622234010.png)
+<img width="1853" height="380" alt="image" src="https://github.com/user-attachments/assets/d7562b55-3751-4185-b03e-f0e75c0a20d6" />
+
 
 Then import it into Shellbags explorer
 
-![](Pasted%20image%2020260622233948.png)
+<img width="1763" height="550" alt="image" src="https://github.com/user-attachments/assets/10a292d3-ac59-4662-a99f-1793e1ce63b2" />
+
 
 
 
@@ -155,7 +160,8 @@ Business Proposals
 
 
 
-![](Pasted%20image%2020260622234051.png)
+<img width="1510" height="922" alt="image" src="https://github.com/user-attachments/assets/58cf4b3a-8374-40b6-90b9-ca28d6f8277a" />
+
 
 
 
@@ -181,7 +187,8 @@ Then analyze it with JLEC
 ```
 JLECmd.exe -f "<path-to-Jumplist-file>" --csv "<path-to-save-csv>"
 ```
-![](Pasted%20image%2020260623122654.png)
+<img width="1071" height="889" alt="image" src="https://github.com/user-attachments/assets/985ae46c-90e1-4497-9682-7ab8bc2e90e2" />
+
 
 
 
@@ -199,7 +206,8 @@ Proposal Brnrdr ltd.docx
 
 
 We can find it in the same jumplist data as in Q8
-![](Pasted%20image%2020260623122828.png)
+<img width="1055" height="330" alt="image" src="https://github.com/user-attachments/assets/9914e891-0566-4bef-b20a-e296b60c9b22" />
+
 
 
 
@@ -218,7 +226,8 @@ RVT-9J
 
 
 We can find USB name in SOFTWARE\Microsoft\Windows Portable Devices\Devices
-![](Pasted%20image%2020260623123945.png)
+<img width="1479" height="1431" alt="image" src="https://github.com/user-attachments/assets/376fe324-b67a-47ab-b049-39081aa602b4" />
+
 
 
 
@@ -237,7 +246,8 @@ E
 ```
 
 
-![](Pasted%20image%2020260623123414.png)
+<img width="961" height="330" alt="image" src="https://github.com/user-attachments/assets/5cd8a0da-b44c-4389-bb6d-10d54567455a" />
+
 
 
 
@@ -286,10 +296,12 @@ Shenzhen SanDiYiXin Electronic Co.,LTD
 
 
 Find the Serial Number in USBSTOR
-![](Pasted%20image%2020260623131959.png)
+<img width="1576" height="287" alt="image" src="https://github.com/user-attachments/assets/325f4ff2-e16f-44e1-a670-0d21652874c9" />
+
 
 Correlate it to serial number in USB and in the same row you have the vendor id in Key Name
-![](Pasted%20image%2020260623132121.png)
+<img width="2312" height="381" alt="image" src="https://github.com/user-attachments/assets/9368ac56-1879-4fca-a116-a95c75f0f89e" />
+
 in our case "346D"
 use this site to locate the vendor
 https://the-sz.com/products/usbid/
@@ -297,4 +309,4 @@ apply "0x" before the ID and search it up
 ```
 0x346D
 ```
-![](Pasted%20image%2020260623132312.png)
+<img width="1951" height="1330" alt="image" src="https://github.com/user-attachments/assets/9175ac8a-36f7-4b46-bfc6-a42d199428ad" />
