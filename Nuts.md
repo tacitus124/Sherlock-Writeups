@@ -22,7 +22,8 @@ nuget install PublishIgnor -Version 1.0.11-beta
 
 
 We can find ran commands in C\Users\Administrator\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history
-![](Pasted%20image%2020260625135014.png)
+<img width="2132" height="521" alt="image" src="https://github.com/user-attachments/assets/c5199d87-70c2-4ddd-88e3-367231e0bcb3" />
+
 
 
 
@@ -85,7 +86,8 @@ When did the attacker initiate the download of the package? Provide the timestam
 
 
 Import MFT into Timeline Explorer and search for the package download
-![](Pasted%20image%2020260625152317.png)
+<img width="3766" height="1016" alt="image" src="https://github.com/user-attachments/assets/b6785a55-c0c8-4338-8ad0-5cd4c49cb526" />
+
 
 
 
@@ -149,7 +151,7 @@ C:\Users\Administrator\.nuget\packages\publishignor\1.0.11-beta\tools\init.ps1
 
 
 In the package we see a init.ps1 file containing suspicious activity
-![](Pasted%20image%2020260625154142.png)
+<img width="2623" height="1465" alt="image" src="https://github.com/user-attachments/assets/8c979222-71d7-4a99-92e9-2676bf711fe2" />
 
 
 
@@ -169,7 +171,8 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 
 
 Checking the content of the ps1 file wee can see it disables Defender´s monitoring
-![](Pasted%20image%2020260625154520.png)
+<img width="1332" height="1550" alt="image" src="https://github.com/user-attachments/assets/fe1c5176-a9f2-4b36-8f3a-07c88435dd77" />
+
 
 
 
@@ -190,7 +193,8 @@ Following the security settings alteration, the attacker downloaded a malicious 
 We know from the ps1 script that it downloads and runs a file named "uninstall.exe"
 
 We can find that Defender detected the file in its logs at \C\ProgramData\Microsoft\Windows Defender\Support. Everytime Defender makes a detection, it also hashes the file
-![](Pasted%20image%2020260625161302.png)
+<img width="2213" height="961" alt="image" src="https://github.com/user-attachments/assets/ce7bcc92-7128-4703-a041-5bbc65764a34" />
+
 
 
 
@@ -210,7 +214,8 @@ Sliver
 
 
 Continuing down the log, we see further information about the file
-![](Pasted%20image%2020260625161247.png)
+<img width="2049" height="1524" alt="image" src="https://github.com/user-attachments/assets/4e312901-1338-434e-8437-06f775d07aaa" />
+
 
 
 
@@ -229,7 +234,7 @@ At what precise moment was the malicious file executed?
 
 
 We can check its prefetch file to find when it ran
-![](Pasted%20image%2020260625162127.png)
+<img width="1192" height="740" alt="image" src="https://github.com/user-attachments/assets/4ae508d7-4a1a-441c-8dc4-9277de960fe7" />
 
 
 
@@ -256,7 +261,8 @@ We can look up the event in Defender to find its detection time
 \C\Windows\System32\winevt\logs\Microsoft-Windows-Windows Defender%4Operational
 ```
 
-![](Pasted%20image%2020260625162813.png)
+<img width="1366" height="1762" alt="image" src="https://github.com/user-attachments/assets/bc2db9fc-d61e-4caa-9ccc-93124c6b8101" />
+
 
 
 
@@ -276,7 +282,8 @@ whoami.exe
 
 
 Going back to the MFT output in Timeline Explorer, follow the flow after uninstall.exe execution
-![](Pasted%20image%2020260625163201.png)
+<img width="3610" height="950" alt="image" src="https://github.com/user-attachments/assets/8b80de9d-dd1d-423b-abdd-271246c3eceb" />
+
 
 
 
@@ -297,9 +304,11 @@ MicrosoftSystemDailyUpdates
 
 
 One task stands out here and its contents disables Defender
-![](Pasted%20image%2020260625164437.png)
+<img width="877" height="426" alt="image" src="https://github.com/user-attachments/assets/873c871d-8577-4a22-9f02-d5499b2f9a0f" />
 
-![](Pasted%20image%2020260625164507.png)
+
+<img width="1210" height="1453" alt="image" src="https://github.com/user-attachments/assets/84c099e6-df04-494e-96cc-809dfc5d2b89" />
+
 
 
 
@@ -314,7 +323,8 @@ When was the scheduled task created? Provide the timestamp in UTC.
 
 
 
-![](Pasted%20image%2020260625164542.png)
+<img width="1367" height="1417" alt="image" src="https://github.com/user-attachments/assets/7bc8698b-caaf-4522-963d-b2fdd06e0aae" />
+
 
 
 
@@ -336,7 +346,8 @@ file.exe
 
 
 After converting prefetch directory into a timeline and importing it into Timeline Explorer we can see this suspious file
-![](Pasted%20image%2020260625170930.png)
+<img width="2683" height="1076" alt="image" src="https://github.com/user-attachments/assets/03de31e9-27e3-42cb-bc07-24c6563ef474" />
+
 
 
 
@@ -363,7 +374,8 @@ python .\usn.py -f '..\..\C\$Extend\$J' -o C:\Users\*\Desktop\usn.csv --csv
 Then import into Timeline Explorer and look for file.exe
 
 We can see file.exe getting renamed to Updater.exe
-![](Pasted%20image%2020260625173800.png)
+<img width="3479" height="584" alt="image" src="https://github.com/user-attachments/assets/be6cec4a-492f-4ea7-ab34-3b04cca1828a" />
+
 
 
 
@@ -385,18 +397,21 @@ Impala
 
 
 We can find its location by searching for it in the MFT data
-![](Pasted%20image%2020260625174522.png)
+<img width="3501" height="421" alt="image" src="https://github.com/user-attachments/assets/98be340b-7d3f-49cd-a7f7-cbbc4255997d" />
 
 
 
-![](Pasted%20image%2020260625175019.png)
+
+<img width="1134" height="580" alt="image" src="https://github.com/user-attachments/assets/b941142c-0a1f-4669-b305-62d93a6e368a" />
+
 
 ```
 Get-FileHash .\Updater.exe -Algorithm SHA256
 ```
 Then search it up on virustotal
 
-![](Pasted%20image%2020260625175121.png)
+<img width="1564" height="384" alt="image" src="https://github.com/user-attachments/assets/115ca37b-ab8e-4bb1-93f9-ab6b4e9b453a" />
+
 
 Impala is the malware family related to this attack.
 https://jfrog.com/blog/impala-stealer-malicious-nuget-package-payload/
@@ -413,4 +428,4 @@ When was the file dropped onto the system? Provide the timestamp in UTC.
 
 
 Going back to the MFT data, we can see its creation date
-![](Pasted%20image%2020260625175405.png)
+<img width="3704" height="373" alt="image" src="https://github.com/user-attachments/assets/523c1318-4bc8-4d64-ad98-472c97c1fa04" />
