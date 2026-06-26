@@ -30,7 +30,8 @@ Start by analyzing the memory dump with volatility and use the cmdline plugin to
 
 
 We find this suspicious process. RuntimeBroker never runs in this location, its a native windows process that lives in system32
-![](Pasted%20image%2020260626142241.png)
+<img width="3309" height="1286" alt="image" src="https://github.com/user-attachments/assets/f08ee9ff-e0cb-40ed-9c83-5ca78ffd182f" />
+
 Following the chain, we can see it was spawned by cmd.exe which was spawned by Code.exe
 
 
@@ -63,9 +64,11 @@ We know Code.exe aka VSCode started it, therefore we can use filescan to dump al
 vol3 -f memdump.dmp windows.filescan > filescan.txt
 ```
 then search through the file for "vscode" which gives us everything related to vscode
-![](Pasted%20image%2020260626153329.png)
+<img width="1613" height="399" alt="image" src="https://github.com/user-attachments/assets/57be5df4-51c0-4905-ba27-a4ab825c3a17" />
+
 We see this suspicious looking extension. Lets further investigate it by searching for it again in filescan dump
-![](Pasted%20image%2020260626153416.png)
+<img width="1473" height="336" alt="image" src="https://github.com/user-attachments/assets/3c65c063-09fd-4f67-9551-aaecf3bc7468" />
+
 Continue by investigating the javascript since it handles execution of code. Note its adress on the left and dump it
 
 ```
@@ -73,10 +76,12 @@ vol3 -f memdump.dmp windows.dumpfiles --virtaddr 0x850cd2e704f0
 ```
 
 Now we can see its contents
-![](Pasted%20image%2020260626153700.png)
+<img width="2401" height="1242" alt="image" src="https://github.com/user-attachments/assets/6529ac70-b031-4b51-917f-8817be023f96" />
+
 
 Looking through it, we see an obfuscated section of code
-![](Pasted%20image%2020260626153728.png)
+<img width="3268" height="313" alt="image" src="https://github.com/user-attachments/assets/2f929449-654b-4543-80b1-d8c71e062bc4" />
+
 When we deobfuscate it, we find out its a reverse shell. Here is the deobfuscated code
 
 ```
@@ -125,7 +130,7 @@ help
 
 
 
-![](Pasted%20image%2020260626160436.png)
+<img width="3222" height="1101" alt="image" src="https://github.com/user-attachments/assets/3f593c83-364c-44e7-bec3-6edb9e1a2a30" />
 
 
 
@@ -169,7 +174,7 @@ dump the package.json file
 ```
 vol3 -f memdump.dmp  windows.dumpfiles --virtaddr 0x850cd16d92b0
 ```
-![](Pasted%20image%2020260626161256.png)
+<img width="2147" height="1190" alt="image" src="https://github.com/user-attachments/assets/68437c6e-094a-4bf0-b8ff-6c3540e5a587" />
 
 
 
@@ -217,7 +222,8 @@ We can use the getsid plugin to retrieve User2´s sid
 vol3 -f memdump.dmp  windows.getsid > sid.txt
 ```
 
-![](Pasted%20image%2020260626162827.png)
+<img width="1377" height="388" alt="image" src="https://github.com/user-attachments/assets/d1d1af21-e7c6-4371-87fa-8064dd3881a1" />
+
 
 
 
@@ -233,7 +239,8 @@ C:\Users\Public\RuntimeBroker.exe
 
 
 
-![](Pasted%20image%2020260626162955.png)
+<img width="1531" height="253" alt="image" src="https://github.com/user-attachments/assets/9cf08ad6-6d5e-4f4e-b1fe-fef39a825d01" />
+
 
 Refer to the chain/output in Q1
 
@@ -254,7 +261,8 @@ Recycle Bin
 
 
 
-![](Pasted%20image%2020260626170305.png)
+<img width="2660" height="1203" alt="image" src="https://github.com/user-attachments/assets/e04afd57-fe90-4e96-8b96-76741b67f2d2" />
+
 
 **Recycle Bin CLSID**:
 
