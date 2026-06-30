@@ -21,7 +21,8 @@ Zoom
 
 
 Import ntuser.dat into Registry Explorer and find the userassist key which shows program execution. We can see it shows Zoom, a popular conference program
-![](Pasted%20image%2020260630144647.png)
+<img width="1459" height="658" alt="image" src="https://github.com/user-attachments/assets/04fb40c5-b80c-4f74-b18f-87ea583e20bb" />
+
 
 
 
@@ -48,7 +49,8 @@ We can find a programs last run via its prefetch file. We can use PECmd to extra
 ```
 .\PECmd.exe -f "..\crewcrow\C\Windows\prefetch\ZOOM.EXE-F882A381.pf"
 ```
-![](Pasted%20image%2020260630145328.png)
+<img width="1529" height="877" alt="image" src="https://github.com/user-attachments/assets/8a3db215-2e14-4e20-96a5-908590323bdf" />
+
 
 
 
@@ -71,7 +73,8 @@ C:\Users\Nefarious\AppData\Roaming\Zoom\data
 
 
 We can find the answer in the same prefetch information as in Q2
-![](Pasted%20image%2020260630150249.png)
+<img width="996" height="776" alt="image" src="https://github.com/user-attachments/assets/159f54ca-bf67-4e27-90f9-b7d5d15f8910" />
+
 
 
 
